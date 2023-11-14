@@ -29,6 +29,20 @@ a:active {
 }
 </style>
 
+  
+<script>
+
+function goBack() 
+{
+
+window.history.back()
+
+}
+
+</script>
+
+
+
 
 </head>
 
@@ -46,8 +60,7 @@ a:active {
 <font face="Georgia">
 <b>A S S O C I A T E </b></font>
 
-<a href="blablabla" onclick="setTimeout(function(){var ww = window.open(window.location, '_self'); ww.close(); }, 1000);">
-    close</a>
+<button onclick="goBack()">Go Back</button>
   
 <hr width="250" align="left">
 
