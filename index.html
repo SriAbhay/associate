@@ -7,6 +7,33 @@
             e.preventDefault();
         });
     </script>
+
+<script>
+        function displayDateTime() {
+            // Get the current date and time
+            const now = new Date();
+
+            // Format the date and time
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+
+            const formattedDate = now.toLocaleDateString('en-US', dateOptions);
+            const formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+
+            // Display the date and time in the HTML element with the id "datetime"
+            document.getElementById('datetime').innerHTML = formattedDate + ' ' + formattedTime;
+        }
+
+        // Call the function when the page loads
+        window.onload = function () {
+            displayDateTime();
+
+            // Update the date and time every second (1000 milliseconds)
+            setInterval(displayDateTime, 1000);
+        };
+    </script>
+
+    
 </head>
 <body bgcolor="white">
 </br></br></br></br>
@@ -14,6 +41,7 @@
 <img src="iid logo.png"></br>
 <h2><font color="green"><b>A S S O C I A T E &nbsp;&nbsp;&nbsp;&nbsp; S U P P O R T</b></font></h2>
 </br>
+    <p id="datetime"></p>
 <hr width="600" color="Blue" height="25">
 <form>
     <label for="pswd"><h3><font color="Blue" face="Georgia">Enter your password</font> </h3></label>
